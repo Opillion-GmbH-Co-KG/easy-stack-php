@@ -4,7 +4,7 @@ export
 
 include ./.makefile/Makefile.color
 include ./.makefile/Makefile.function
-include ./.makefile/Makefile.swarm
+include ./.makefile/Makefile.killer
 
 .DEFAULT_GOAL := help
 OUTPUT := @

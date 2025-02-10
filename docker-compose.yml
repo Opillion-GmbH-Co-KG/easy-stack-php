@@ -1,5 +1,7 @@
 services:
   php-fpm:
+    hostname: php-fpm
+    container_name: php-fpm
     build:
       context: .docker/${DOCKER_IMAGE_SOURCE}/
       dockerfile: php8.Dockerfile

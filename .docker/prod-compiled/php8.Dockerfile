@@ -1,0 +1,2 @@
+ARG PROD_IMAGE_TAG=latest
+FROM opillion/php8:${PROD_IMAGE_TAG}

@@ -17,7 +17,7 @@ services:
     command: >
       bash -c "/usr/sbin/entrypoint.sh"
     volumes:
-      - ${PHP_DATA_PATH:-php-data}::/var/www
+      - ${PHP_DATA_PATH:-php-data}:/var/www
       - /etc/localtime:/etc/localtime:ro # timezone
       - ./.docker/dev/php8/conf.d:/usr/local/etc/php/conf.d
     environment:

@@ -1,12 +1,9 @@
-FROM php:8.4-rc-fpm-alpine3.20
+FROM php:8.5.11-fpm-alpine3.24
 ARG USER_ID
 ARG GROUP_ID
 ARG DOCKER_USER
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.20/main" >> /etc/apk/repositories \
-    && echo "http://dl-cdn.alpinelinux.org/alpine/v3.20/community" >> /etc/apk/repositories
 
 RUN apk update \
     && apk upgrade \

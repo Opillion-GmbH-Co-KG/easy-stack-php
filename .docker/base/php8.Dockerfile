@@ -1,4 +1,5 @@
-FROM php:8.5.11-fpm-alpine3.24
+FROM php:8.5.12-fpm-alpine3.24@sha256:f09d9172dd28b8696aef729ca2c2081a132c1f8d581218c99497d552c82a92df
+RUN printf 'session.upload_progress.enabled=0\n' > /usr/local/etc/php/conf.d/zz-security.ini
 ARG USER_ID
 ARG GROUP_ID
 ARG DOCKER_USER
